@@ -6,4 +6,5 @@ int main() {
         app.update();
         app.render();
     }
+    return 0;
 }
