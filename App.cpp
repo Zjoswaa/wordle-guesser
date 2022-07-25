@@ -197,8 +197,8 @@ void App::initVariables() {
         v.clear();
         for (int j = 0; j < 26; j++) {
             v.push_back(alphabet[j + 1]);
-            possibleLetters[i] = v;
         }
+        possibleLetters[i] = v;
     }
 
     for (int i = 0; i < squareCount; i++) {
@@ -531,13 +531,13 @@ void App::confirmLines() {
         std::cout << possibleWords[i] << std::endl;
     }
 //
-    for (int i = 0; i < 5; i++) {
-        std::cout << "Letter " << i << ": ";
-        for (int j = 0; j < possibleLetters[i].size(); j++) {
-            std::cout << possibleLetters[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
+//    for (int i = 0; i < 5; i++) {
+//        std::cout << "Letter " << i << ": ";
+//        for (int j = 0; j < possibleLetters[i].size(); j++) {
+//            std::cout << possibleLetters[i][j] << " ";
+//        }
+//        std::cout << std::endl;
+//    }
 //
 //    std::cout << "Entered words:" << std::endl;
 //    for (int i = 0; i < 6; i++) {
@@ -556,13 +556,13 @@ void App::updatePossibleLetters() {
         v.clear();
         for (int j = 0; j < 26; j++) {
             v.push_back(alphabet[j + 1]);
-            possibleLetters[i] = v;
         }
+        possibleLetters[i] = v;
     }
 
     for (int i = 0; i < currentRow + 1; i++) {
         for (int j = 0; j < 5; j++) {
-            std::cout << letterId[(5 * i) + j] << " " << currentSquareBackgrounds[(5 * i) + j] << std::endl;
+//            std::cout << letterId[(5 * i) + j] << " " << currentSquareBackgrounds[(5 * i) + j] << std::endl;
             // Gray square (letter is not in word)
             if (currentSquareBackgrounds[(5 * i) + j] == 0) {
                 // Remove the letter in this square from the possible letters of every letter
